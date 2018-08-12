@@ -1,17 +1,37 @@
-﻿@{
+﻿<!DOCTYPE html>
+@{
     ViewBag.Title = "Contact";
+    ViewBag.Message = "Service done the Highlands Way!";
+    ViewBag.Author = "Donny Dedman";
 }
+<body>
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div id="gmap" style="height: auto; margin:auto; padding:inherit">
+        <address>
+            Highlands Generators of Maine<br />
+            172 Lawrence St.
+            Dover-Foxcroft, ME 04426<br />
+            <abbr title="Phone">P:</abbr>
+            904.891.5162
+        </address>
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('gmap'), { center: { lat: -34.397, lng: 150.644}, zoom=8 });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]&callback=initMap"
+        async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+        &key="></script>
+    </div>
+</body>
+<footer>
+    <address>
+        <strong>Support:</strong>   <a href="aaron.nextgen@gmail.com">aaron.nextgen@gmail.com</a><br />
+        <strong>Websupport:</strong> <a href="zeroviz.ddedman@yahoo.com">zeroviz.ddedman@yahoo.com</a>
+    </address>
+</footer>
